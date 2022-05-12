@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour
 
   GameObject playerCamera;
   float cameraRotation;
+  public Flashlight_PRO flashlight;
    
    void Start()
    {
        characterController = GetComponent<CharacterController>();
+
+       flashlight = GetComponent<Flashlight_PRO>();
 
        playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
@@ -28,6 +31,13 @@ public class PlayerController : MonoBehaviour
 
 
       float y = 0;
+
+      if (Input.GetKeyDown(KeyCode.F))
+      {
+
+      		flashlight.Switch();
+
+      }
 
       if(!characterController.isGrounded){
            y = -_gravidade;
