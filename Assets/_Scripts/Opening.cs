@@ -27,7 +27,9 @@ public class Opening : MonoBehaviour
     	Speech.GetComponent<Text>().text = "Onde estou?";
     	yield return new WaitForSeconds(2.5f);
     	Speech.GetComponent<Text>().text = "Preciso sair daqui.";
-    	yield return new WaitForSeconds(1.5f);
+    	yield return new WaitForSeconds(2.5f);
+    	Speech.GetComponent<Text>().text = "-- Controles: WASD para andar, shift para correr e spacebar para pular.--";
+    	yield return new WaitForSeconds(4f);
     	Speech.GetComponent<Text>().text = "";
     	Player.GetComponent<FirstPersonController>().enabled = true;
 

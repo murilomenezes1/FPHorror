@@ -19,7 +19,7 @@ public class WhatIsThat : MonoBehaviour
 	IEnumerator ScenePlayer()
 	{
 
-		Speech.GetComponent<Text>().text = "O que é aquilo?";
+		Speech.GetComponent<Text>().text = "O que é aquilo? Acho que consigo pegar...";
 		yield return new WaitForSeconds(2);
 		Speech.GetComponent<Text>().text = "";
 
